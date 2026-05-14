@@ -1,0 +1,1755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Moanish Ashok Kumar — Applied AI Engineer · Singapore</title>
+<meta name="description" content="Applied AI graduate from Temasek Polytechnic. 500+ certifications. AI, RPA, Cloud, Full-Stack. Incoming SUTD Design & AI." />
+
+<!-- Open Graph / link preview -->
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="Moanish Ashok Kumar — Applied AI Engineer" />
+<meta property="og:description" content="500+ certifications. 300+ Credly badges. IBM Certified AI Engineer. Building things that bridge AI and the real world." />
+<meta property="og:image" content="moanish.jpg" />
+<meta property="og:locale" content="en_SG" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Moanish Ashok Kumar — Applied AI Engineer" />
+<meta name="twitter:description" content="500+ certifications. IBM Certified AI Engineer. Incoming SUTD Design & AI." />
+<meta name="twitter:image" content="moanish.jpg" />
+
+<!-- Favicon (inline SVG with accent dot) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230c0b09'/><text x='50%25' y='58%25' font-family='Georgia,serif' font-size='22' font-weight='700' fill='%23f4ede0' text-anchor='middle' dominant-baseline='middle'>M</text><circle cx='25' cy='25' r='2.5' fill='%23e85d2c'/></svg>" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0c0b09;
+    --bg-2: #15130f;
+    --bg-3: #1d1a14;
+    --paper: #f4ede0;
+    --paper-dim: #c9c0ad;
+    --ink: #e9e1cf;
+    --ink-dim: #8a8270;
+    --rule: #2a261d;
+    --accent: #e85d2c;
+    --accent-soft: #f0a060;
+    --gold: #c89a3c;
+    --green: #4ade80;
+    --serif: "Fraunces", "Times New Roman", serif;
+    --mono: "JetBrains Mono", ui-monospace, monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-feature-settings: "ss01", "ss02", "kern";
+    overflow-x: hidden;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0.06;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' /></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='1'/></svg>");
+  }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--accent); color: var(--bg); }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 50;
+    padding: 18px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    background: rgba(12, 11, 9, 0.7);
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  nav .brand { color: var(--paper); font-weight: 500; }
+  nav .brand span { color: var(--accent); }
+  nav .links { display: flex; gap: 28px; }
+  nav .links a { color: var(--ink-dim); transition: color .3s ease; }
+  nav .links a:hover { color: var(--accent); }
+  nav .status { color: var(--ink-dim); display: flex; align-items: center; gap: 8px; }
+  nav .status::before {
+    content: "";
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 8px var(--green);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+  @media (max-width: 720px) {
+    nav .links { display: none; }
+    nav { padding: 14px 20px; }
+  }
+
+  .hero {
+    min-height: 100vh;
+    padding: 140px 32px 60px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    align-items: start;
+  }
+  @media (max-width: 980px) { .hero-grid { grid-template-columns: 1fr; } }
+
+  .hero .eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out 0.2s forwards;
+  }
+  .hero .eyebrow .line { width: 60px; height: 1px; background: var(--accent); }
+
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(60px, 11vw, 180px);
+    line-height: 0.88;
+    letter-spacing: -0.04em;
+    color: var(--paper);
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+    opacity: 0;
+    animation: fadeUp 1s ease-out 0.4s forwards;
+  }
+  .hero h1 .italic { font-style: italic; font-weight: 400; color: var(--accent); }
+
+  .hero .role-line {
+    margin-top: 40px;
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--ink-dim);
+    letter-spacing: 0.02em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out 0.7s forwards;
+  }
+  .hero .role-line span.tag {
+    padding: 5px 10px;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    color: var(--paper-dim);
+  }
+  .hero .role-line span.dot { color: var(--accent); }
+
+  .hero-sidebar {
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out 0.9s forwards;
+    border-left: 1px solid var(--rule);
+    padding-left: 28px;
+  }
+  .hero-sidebar .meta-row {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    margin-bottom: 8px;
+  }
+  .hero-sidebar .meta-val {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 18px;
+    color: var(--paper);
+    margin-bottom: 28px;
+    line-height: 1.4;
+  }
+  .hero-sidebar .meta-val.large {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+  }
+  .hero-sidebar .meta-val.large .small {
+    font-size: 13px;
+    color: var(--accent);
+    font-family: var(--mono);
+    font-weight: 400;
+    display: block;
+    margin-top: 4px;
+    letter-spacing: 0.1em;
+  }
+
+  .hero-mark {
+    position: absolute;
+    right: -40px;
+    bottom: -40px;
+    font-family: var(--serif);
+    font-weight: 900;
+    font-size: clamp(280px, 38vw, 600px);
+    line-height: 0.8;
+    color: var(--bg-2);
+    font-style: italic;
+    pointer-events: none;
+    user-select: none;
+    z-index: -1;
+    letter-spacing: -0.05em;
+  }
+  @media (max-width: 980px) {
+    .hero-mark { font-size: 60vw; right: -10vw; bottom: -10vw; }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .ribbon {
+    background: var(--bg-2);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 60px 32px;
+  }
+  .ribbon-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+  @media (max-width: 820px) { .ribbon-grid { grid-template-columns: 1fr; gap: 32px; } }
+  .ribbon-card { border-left: 2px solid var(--accent); padding-left: 28px; }
+  .ribbon-card .tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .ribbon-card h3 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(26px, 3vw, 36px);
+    line-height: 1.15;
+    color: var(--paper);
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+  .ribbon-card h3 em { font-style: italic; color: var(--accent-soft); font-weight: 400; }
+  .ribbon-card p { color: var(--paper-dim); font-size: 15px; line-height: 1.6; }
+
+  section {
+    padding: 120px 32px;
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  section.full { max-width: none; padding-left: 0; padding-right: 0; }
+
+  .section-head {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
+    margin-bottom: 80px;
+    align-items: baseline;
+  }
+  @media (max-width: 720px) {
+    .section-head { grid-template-columns: 1fr; gap: 12px; margin-bottom: 50px; }
+  }
+  .section-head .num {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+    padding-top: 12px;
+    border-top: 1px solid var(--accent);
+    display: inline-block;
+  }
+  .section-head h2 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(40px, 6vw, 84px);
+    line-height: 1;
+    letter-spacing: -0.025em;
+    color: var(--paper);
+  }
+  .section-head h2 .em { font-style: italic; color: var(--accent); font-weight: 400; }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+  @media (max-width: 820px) {
+    .about-grid { grid-template-columns: 1fr; gap: 50px; }
+  }
+  .about-body p {
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--paper-dim);
+    margin-bottom: 22px;
+  }
+  .about-body p:first-child::first-letter {
+    font-family: var(--serif);
+    font-size: 72px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--accent);
+    float: left;
+    line-height: 0.85;
+    margin: 6px 10px 0 -2px;
+  }
+  .about-body .quote {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 26px;
+    color: var(--paper);
+    line-height: 1.35;
+    border-left: 2px solid var(--accent);
+    padding-left: 24px;
+    margin: 36px 0;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border: 1px solid var(--rule);
+  }
+  .stat {
+    padding: 30px 26px;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+    overflow: hidden;
+  }
+  .stat:nth-child(2n) { border-right: none; }
+  .stat:nth-last-child(-n+2) { border-bottom: none; }
+  .stat .num {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: 58px;
+    line-height: 1;
+    color: var(--paper);
+    letter-spacing: -0.03em;
+  }
+  .stat .num .plus { color: var(--accent); font-style: italic; }
+  .stat .label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    margin-top: 14px;
+  }
+
+  .cred-section {
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .cred-marquee-wrap {
+    overflow: hidden;
+    position: relative;
+    padding: 30px 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin: 60px 0;
+  }
+  .cred-marquee-wrap::before,
+  .cred-marquee-wrap::after {
+    content: "";
+    position: absolute; top: 0; bottom: 0;
+    width: 120px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .cred-marquee-wrap::before { left: 0; background: linear-gradient(90deg, var(--bg-2), transparent); }
+  .cred-marquee-wrap::after { right: 0; background: linear-gradient(270deg, var(--bg-2), transparent); }
+  .cred-marquee {
+    display: flex;
+    gap: 14px;
+    animation: scroll 60s linear infinite;
+    width: max-content;
+  }
+  .cred-marquee.reverse { animation: scroll-r 80s linear infinite; }
+  .cred-chip {
+    flex-shrink: 0;
+    padding: 12px 22px;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--paper-dim);
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    transition: all .3s ease;
+  }
+  .cred-chip:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .cred-chip .vendor { color: var(--accent); margin-right: 8px; font-weight: 700; }
+  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes scroll-r { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+
+  .vendor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0;
+    border: 1px solid var(--rule);
+    max-width: 1400px;
+    margin: 60px auto 0;
+  }
+  .vendor-cell {
+    padding: 32px 26px;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    transition: background .3s ease;
+    cursor: default;
+  }
+  .vendor-cell:hover { background: rgba(232, 93, 44, 0.06); }
+  .vendor-cell .v-name {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--paper);
+    margin-bottom: 8px;
+  }
+  .vendor-cell .v-count {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    border-top: 1px solid var(--rule);
+  }
+  .project {
+    display: grid;
+    grid-template-columns: 80px 1fr 1.5fr 200px;
+    gap: 32px;
+    padding: 40px 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: start;
+    position: relative;
+    transition: all .4s ease;
+    cursor: default;
+  }
+  .project::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s cubic-bezier(.7,0,.2,1);
+    z-index: -1;
+    opacity: 0.04;
+  }
+  .project:hover::before { transform: scaleX(1); }
+  .project:hover .p-title { color: var(--accent); }
+  .project:hover .p-arrow { transform: translate(8px, -8px); color: var(--accent); }
+  @media (max-width: 880px) {
+    .project { grid-template-columns: 1fr; gap: 12px; padding: 32px 0; }
+  }
+  .project .p-num {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-dim);
+    letter-spacing: 0.1em;
+    padding-top: 6px;
+  }
+  .project .p-title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: var(--paper);
+    transition: color .3s ease;
+  }
+  .project .p-title em { font-style: italic; color: var(--accent-soft); font-weight: 300; }
+  .project .p-org {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    margin-top: 10px;
+  }
+  .project .p-desc {
+    font-size: 15px;
+    color: var(--paper-dim);
+    line-height: 1.55;
+  }
+  .project .p-stack {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .project .p-stack span {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--accent);
+    padding: 3px 8px;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .project .p-meta {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-dim);
+    letter-spacing: 0.05em;
+    line-height: 1.7;
+    text-align: right;
+  }
+  @media (max-width: 880px) {
+    .project .p-meta { text-align: left; }
+  }
+  .project .p-meta .p-arrow {
+    display: inline-block;
+    font-family: var(--serif);
+    font-size: 28px;
+    color: var(--paper-dim);
+    transition: all .3s ease;
+    margin-bottom: 12px;
+  }
+  .project .p-meta .label { color: var(--accent); display: block; margin-bottom: 4px; }
+
+  .exp-section {
+    background: var(--bg-2);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .exp-grid { display: grid; grid-template-columns: 1fr; gap: 0; }
+  .exp {
+    display: grid;
+    grid-template-columns: 220px 1fr 280px;
+    gap: 40px;
+    padding: 50px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .exp:last-child { border-bottom: none; }
+  @media (max-width: 880px) {
+    .exp { grid-template-columns: 1fr; gap: 16px; padding: 36px 0; }
+  }
+  .exp .e-date {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding-top: 8px;
+  }
+  .exp .e-date .duration {
+    display: block;
+    color: var(--ink-dim);
+    margin-top: 4px;
+    letter-spacing: 0.08em;
+  }
+  .exp .e-role {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.2;
+    color: var(--paper);
+    margin-bottom: 6px;
+  }
+  .exp .e-role em { font-style: italic; color: var(--accent-soft); }
+  .exp .e-company {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--paper-dim);
+    margin-bottom: 16px;
+  }
+  .exp .e-body { color: var(--paper-dim); font-size: 15px; line-height: 1.6; }
+  .exp .e-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-content: flex-start;
+  }
+  .exp .e-tags span {
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 4px 9px;
+    border: 1px solid var(--rule);
+    color: var(--paper-dim);
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    height: fit-content;
+  }
+  .exp .e-recog {
+    margin-top: 12px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  .skills-matrix {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  @media (max-width: 820px) { .skills-matrix { grid-template-columns: 1fr; } }
+  .skill-block {
+    background: var(--bg);
+    padding: 30px 26px;
+    transition: background .3s ease;
+  }
+  .skill-block:hover { background: var(--bg-2); }
+  .skill-block .icon {
+    font-family: var(--serif);
+    font-size: 36px;
+    font-style: italic;
+    color: var(--accent);
+    margin-bottom: 18px;
+    font-weight: 300;
+  }
+  .skill-block h3 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--paper);
+    margin-bottom: 14px;
+  }
+  .skill-block ul { list-style: none; }
+  .skill-block li {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--paper-dim);
+    padding: 5px 0;
+    border-bottom: 1px dashed var(--rule);
+    letter-spacing: 0.02em;
+  }
+  .skill-block li:last-child { border-bottom: none; }
+
+  .edu-list { border-top: 1px solid var(--rule); }
+  .edu-row {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    gap: 40px;
+    padding: 36px 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: baseline;
+  }
+  @media (max-width: 880px) {
+    .edu-row { grid-template-columns: 1fr; gap: 10px; }
+  }
+  .edu-row .year {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .edu-row .school {
+    font-family: var(--serif);
+    font-size: 24px;
+    color: var(--paper);
+    font-weight: 400;
+  }
+  .edu-row .school em { font-style: italic; color: var(--accent-soft); }
+  .edu-row .program {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-dim);
+    margin-top: 6px;
+    letter-spacing: 0.05em;
+  }
+  .edu-row .status {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--paper-dim);
+    text-transform: uppercase;
+    text-align: right;
+  }
+  @media (max-width: 880px) { .edu-row .status { text-align: left; } }
+  .edu-row .status.incoming { color: var(--gold); }
+
+  .contact {
+    text-align: center;
+    padding: 160px 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .contact .contact-mark {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--serif);
+    font-weight: 900;
+    font-style: italic;
+    font-size: clamp(180px, 30vw, 480px);
+    color: var(--bg-2);
+    z-index: -1;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    pointer-events: none;
+  }
+  .contact .pretext {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+  .contact h2 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(56px, 10vw, 140px);
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    color: var(--paper);
+    margin-bottom: 50px;
+  }
+  .contact h2 em { font-style: italic; color: var(--accent); font-weight: 400; }
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  .contact-links a {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 16px 28px;
+    border: 1px solid var(--paper-dim);
+    color: var(--paper);
+    transition: all .3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .contact-links a:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg);
+    transform: translateY(-3px);
+  }
+  .contact-links a .arrow { transition: transform .3s ease; }
+  .contact-links a:hover .arrow { transform: translate(3px, -3px); }
+
+  footer {
+    padding: 40px 32px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--ink-dim);
+    text-transform: uppercase;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  footer span.dot { color: var(--accent); }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity .9s ease-out, transform .9s ease-out;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ───── PORTRAIT (hero) ───── */
+  .portrait {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    margin-bottom: 32px;
+    overflow: hidden;
+    background: var(--bg-2);
+    border: 1px solid var(--rule);
+  }
+  .portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    filter: grayscale(40%) contrast(1.05) brightness(0.92);
+    transition: filter .6s ease, transform .6s ease;
+  }
+  .portrait:hover img {
+    filter: grayscale(0%) contrast(1.05) brightness(1);
+    transform: scale(1.02);
+  }
+  .portrait::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(12,11,9,0.55) 100%);
+    pointer-events: none;
+  }
+  .portrait .caption {
+    position: absolute;
+    bottom: 14px;
+    left: 16px;
+    right: 16px;
+    z-index: 2;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--paper-dim);
+    display: flex;
+    justify-content: space-between;
+  }
+  .portrait .caption .dot { color: var(--accent); }
+
+  /* ───── RECOMMENDATION ───── */
+  .recommendation {
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+    padding: 140px 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .recommendation-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .recommendation::before {
+    content: "\201C";
+    position: absolute;
+    top: 20px;
+    left: 5%;
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 900;
+    font-size: clamp(280px, 28vw, 460px);
+    line-height: 1;
+    color: var(--bg-2);
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+  }
+  .rec-eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    padding-top: 12px;
+    border-top: 1px solid var(--accent);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  .rec-quote {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(26px, 4vw, 48px);
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    color: var(--paper);
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+  }
+  .rec-quote .highlight {
+    color: var(--accent);
+    font-style: italic;
+  }
+  .rec-attribution {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 28px;
+    align-items: center;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+    position: relative;
+    z-index: 1;
+  }
+  @media (max-width: 720px) {
+    .rec-attribution { grid-template-columns: 1fr; gap: 16px; }
+  }
+  .rec-attribution .signer-name {
+    font-family: var(--serif);
+    font-size: 22px;
+    color: var(--paper);
+    font-weight: 400;
+  }
+  .rec-attribution .signer-title {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--ink-dim);
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .rec-attribution .signer-company {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 18px;
+    color: var(--accent-soft);
+  }
+  .rec-attribution .signer-date {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--ink-dim);
+    text-transform: uppercase;
+    text-align: right;
+  }
+  @media (max-width: 720px) {
+    .rec-attribution .signer-date { text-align: left; }
+  }
+
+  /* ───── PRESS STRIP ───── */
+  .press {
+    padding: 80px 32px;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    background: var(--bg);
+  }
+  .press-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+  @media (max-width: 820px) {
+    .press-inner { grid-template-columns: 1fr; gap: 24px; }
+  }
+  .press .num {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+    padding-top: 12px;
+    border-top: 1px solid var(--accent);
+    display: inline-block;
+  }
+  .press-quote {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(22px, 2.8vw, 32px);
+    line-height: 1.35;
+    color: var(--paper);
+    margin-bottom: 24px;
+    letter-spacing: -0.01em;
+  }
+  .press-source {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--ink-dim);
+    text-transform: uppercase;
+  }
+  .press-source a {
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 1px;
+    transition: opacity .3s ease;
+  }
+  .press-source a:hover { opacity: 0.7; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">M.A.K<span>.</span></div>
+  <div class="links">
+    <a href="#about">About</a>
+    <a href="#credentials">Credentials</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="status">Open to work</div>
+</nav>
+
+<section class="hero">
+  <div class="hero-mark">500+</div>
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow">
+        <span class="line"></span>
+        <span>Portfolio · 2026 · Singapore</span>
+      </div>
+      <h1>
+        Moanish<br>
+        Ashok <span class="italic">Kumar</span><span style="color:var(--accent)">.</span>
+      </h1>
+      <div class="role-line">
+        <span class="tag">Applied AI</span>
+        <span class="dot">/</span>
+        <span class="tag">RPA</span>
+        <span class="dot">/</span>
+        <span class="tag">Cloud</span>
+        <span class="dot">/</span>
+        <span class="tag">Full-Stack</span>
+        <span class="dot">/</span>
+        <span class="tag">Business Analysis</span>
+      </div>
+    </div>
+
+    <aside class="hero-sidebar">
+      <div class="portrait">
+        <img src="moanish.jpg" alt="Portrait of Moanish Ashok Kumar" loading="lazy" />
+        <div class="caption">
+          <span>Moanish A. K.</span>
+          <span><span class="dot">●</span> Singapore '26</span>
+        </div>
+      </div>
+
+      <div class="meta-row">// Currently</div>
+      <div class="meta-val">Business Analyst Intern at <strong style="font-style:normal; color:var(--accent-soft)">Accenture</strong>, supporting regional digital transformation projects.</div>
+
+      <div class="meta-row">// Holdings</div>
+      <div class="meta-val large">
+        500+
+        <span class="small">Certifications · 300+ Credly badges</span>
+      </div>
+
+      <div class="meta-row">// Next</div>
+      <div class="meta-val">Incoming <em>SUTD</em> · Design &amp; Artificial Intelligence</div>
+
+      <div class="meta-row">// Based</div>
+      <div class="meta-val">Singapore <em>·</em> on-site, hybrid &amp; remote</div>
+    </aside>
+  </div>
+</section>
+
+<div class="ribbon reveal">
+  <div class="ribbon-grid">
+    <div class="ribbon-card">
+      <div class="tag">— Latest Milestone</div>
+      <h3>Accepted into <em>SUTD</em> · Design &amp; Artificial Intelligence</h3>
+      <p>Not just another AI programme — SUTD's approach pairs technical depth with design thinking, building systems that actually make sense to the people who use them.</p>
+    </div>
+    <div class="ribbon-card">
+      <div class="tag">— Recognition</div>
+      <h3>500 <em>certifications</em> · 300 Credly badges · IBM AI Engineer</h3>
+      <p>One badge represents a moment of choosing progress over comfort. Five hundred represent a habit. Operational Excellence Award winner at Alphaeus during the Desktop Engineer stint.</p>
+    </div>
+  </div>
+</div>
+
+<section id="about" class="reveal">
+  <div class="section-head">
+    <span class="num">01 — About</span>
+    <h2>Building things that bridge AI<br>and the <span class="em">real world</span>.</h2>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-body">
+      <p>I'm an Applied Artificial Intelligence graduate from Temasek Polytechnic, soon heading to SUTD for Design &amp; AI. Strong in Python, data structures, and full-stack development — applied across machine learning, cloud, RPA, data analytics, cybersecurity, and mobile.</p>
+      <p>I've shipped real solutions for real teams. At Mandai Wildlife Group I built a Procurement RPA bot in Power Automate that saved the department roughly 1,200 hours. I tested an AI receipt-recognition model to a 97% accuracy benchmark. At Accenture, I'm now supporting regional digital transformation projects across Jira and Salesforce.</p>
+      <div class="quote">"Tech alone isn't enough. You can build something powerful, but if it doesn't solve a real problem properly, it kind of misses the point."</div>
+      <p>Helpdesk to architecture, full-stack engineering to enterprise AI — the working life I've built spans the whole arc. Always learning. Always shipping. Currently going deeper on agentic AI, RAG systems, and serverless architectures.</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="num">500<span class="plus">+</span></div>
+        <div class="label">Certifications</div>
+      </div>
+      <div class="stat">
+        <div class="num">300<span class="plus">+</span></div>
+        <div class="label">Credly Badges</div>
+      </div>
+      <div class="stat">
+        <div class="num">1.5<span class="plus">K+</span></div>
+        <div class="label">Connections</div>
+      </div>
+      <div class="stat">
+        <div class="num">12</div>
+        <div class="label">Major Projects</div>
+      </div>
+      <div class="stat">
+        <div class="num">5</div>
+        <div class="label">Internships &amp; Roles</div>
+      </div>
+      <div class="stat">
+        <div class="num">120<span class="plus">+</span></div>
+        <div class="label">AI/ML Endorsements</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="credentials" class="cred-section full reveal">
+  <div style="max-width:1400px; margin:0 auto; padding:0 32px;">
+    <div class="section-head">
+      <span class="num">02 — Credentials</span>
+      <h2>Five hundred and <span class="em">counting</span>.</h2>
+    </div>
+    <p style="font-size:18px; color:var(--paper-dim); max-width:720px; line-height:1.6;">
+      500+ certifications in total — with 300+ of them verified on Credly. Issued by IBM SkillsBuild, AWS Training, Cisco Networking Academy, Microsoft Learn, MongoDB University, The Linux Foundation, NVIDIA, Google Cloud Skills Boost, AI Singapore, and Coursera. Flagship is IBM AI Engineer Professional. The headline numbers below are real counts — not rounded for effect.
+    </p>
+  </div>
+
+  <div style="max-width:1400px; margin:60px auto 0; padding:0 32px;">
+    <div class="vendor-grid">
+      <div class="vendor-cell"><div class="v-name">AWS</div><div class="v-count">41 Credentials</div></div>
+      <div class="vendor-cell"><div class="v-name">IBM</div><div class="v-count">Specialist · Advanced</div></div>
+      <div class="vendor-cell"><div class="v-name">Cisco</div><div class="v-count">Ethical Hacker · Cyber</div></div>
+      <div class="vendor-cell"><div class="v-name">Google</div><div class="v-count">PM · UX · Cyber · Data</div></div>
+      <div class="vendor-cell"><div class="v-name">Microsoft</div><div class="v-count">Copilot · Power Platform</div></div>
+      <div class="vendor-cell"><div class="v-name">MongoDB</div><div class="v-count">14+ Skill Badges</div></div>
+      <div class="vendor-cell"><div class="v-name">Linux Foundation</div><div class="v-count">40+ Open Source</div></div>
+      <div class="vendor-cell"><div class="v-name">NVIDIA</div><div class="v-count">Deep Learning · Jetson</div></div>
+      <div class="vendor-cell"><div class="v-name">AI Singapore</div><div class="v-count">AI4I · Ethics</div></div>
+      <div class="vendor-cell"><div class="v-name">Coursera</div><div class="v-count">Pro Certs · IBM Tracks</div></div>
+      <div class="vendor-cell"><div class="v-name">Salesforce</div><div class="v-count">Sales Ops Pro</div></div>
+      <div class="vendor-cell"><div class="v-name">Oracle</div><div class="v-count">Java Foundations</div></div>
+    </div>
+  </div>
+
+  <div class="cred-marquee-wrap" style="margin-top:80px;">
+    <div class="cred-marquee">
+      <div class="cred-chip"><span class="vendor">IBM</span>AI Engineer Professional Certificate</div>
+      <div class="cred-chip"><span class="vendor">IBM</span>Machine Learning Specialist · Advanced</div>
+      <div class="cred-chip"><span class="vendor">IBM</span>Data Science Professional</div>
+      <div class="cred-chip"><span class="vendor">IBM</span>AI Developer Professional</div>
+      <div class="cred-chip"><span class="vendor">IBM</span>Generative AI Engineering</div>
+      <div class="cred-chip"><span class="vendor">IBM</span>RAG and Agentic AI</div>
+      <div class="cred-chip"><span class="vendor">AWS</span>Cloud Quest Solutions Architect</div>
+      <div class="cred-chip"><span class="vendor">AWS</span>Cloud Quest GenAI Practitioner</div>
+      <div class="cred-chip"><span class="vendor">AWS</span>Cloud Quest Serverless Developer</div>
+      <div class="cred-chip"><span class="vendor">AWS</span>Well-Architected Proficient</div>
+      <div class="cred-chip"><span class="vendor">AWS</span>Partner: Agentic AI Technical</div>
+      <div class="cred-chip"><span class="vendor">AWS</span>Machine Learning Foundations</div>
+      <div class="cred-chip"><span class="vendor">Cisco</span>Ethical Hacker</div>
+      <div class="cred-chip"><span class="vendor">Cisco</span>Cyber Threat Management</div>
+      <div class="cred-chip"><span class="vendor">Cisco</span>Junior Cybersecurity Analyst</div>
+      <div class="cred-chip"><span class="vendor">Cisco</span>Network Defense</div>
+      <div class="cred-chip"><span class="vendor">Google</span>Cybersecurity Professional</div>
+      <div class="cred-chip"><span class="vendor">Google</span>Project Management v2</div>
+      <div class="cred-chip"><span class="vendor">Google</span>Advanced Data Analytics</div>
+      <div class="cred-chip"><span class="vendor">Google</span>UX Design</div>
+      <div class="cred-chip"><span class="vendor">Google</span>IT Automation with Python</div>
+      <div class="cred-chip"><span class="vendor">IBM</span>AI Engineer Professional Certificate</div>
+      <div class="cred-chip"><span class="vendor">IBM</span>Machine Learning Specialist · Advanced</div>
+      <div class="cred-chip"><span class="vendor">IBM</span>Data Science Professional</div>
+      <div class="cred-chip"><span class="vendor">IBM</span>AI Developer Professional</div>
+      <div class="cred-chip"><span class="vendor">IBM</span>Generative AI Engineering</div>
+      <div class="cred-chip"><span class="vendor">IBM</span>RAG and Agentic AI</div>
+      <div class="cred-chip"><span class="vendor">AWS</span>Cloud Quest Solutions Architect</div>
+      <div class="cred-chip"><span class="vendor">AWS</span>Cloud Quest GenAI Practitioner</div>
+      <div class="cred-chip"><span class="vendor">AWS</span>Cloud Quest Serverless Developer</div>
+      <div class="cred-chip"><span class="vendor">AWS</span>Well-Architected Proficient</div>
+      <div class="cred-chip"><span class="vendor">AWS</span>Partner: Agentic AI Technical</div>
+      <div class="cred-chip"><span class="vendor">AWS</span>Machine Learning Foundations</div>
+      <div class="cred-chip"><span class="vendor">Cisco</span>Ethical Hacker</div>
+      <div class="cred-chip"><span class="vendor">Cisco</span>Cyber Threat Management</div>
+      <div class="cred-chip"><span class="vendor">Cisco</span>Junior Cybersecurity Analyst</div>
+      <div class="cred-chip"><span class="vendor">Cisco</span>Network Defense</div>
+      <div class="cred-chip"><span class="vendor">Google</span>Cybersecurity Professional</div>
+      <div class="cred-chip"><span class="vendor">Google</span>Project Management v2</div>
+      <div class="cred-chip"><span class="vendor">Google</span>Advanced Data Analytics</div>
+      <div class="cred-chip"><span class="vendor">Google</span>UX Design</div>
+      <div class="cred-chip"><span class="vendor">Google</span>IT Automation with Python</div>
+    </div>
+  </div>
+
+  <div class="cred-marquee-wrap">
+    <div class="cred-marquee reverse">
+      <div class="cred-chip"><span class="vendor">MongoDB</span>RAG with MongoDB</div>
+      <div class="cred-chip"><span class="vendor">MongoDB</span>Vector Search</div>
+      <div class="cred-chip"><span class="vendor">MongoDB</span>Schema Design Optimization</div>
+      <div class="cred-chip"><span class="vendor">MongoDB</span>Building AI Agents</div>
+      <div class="cred-chip"><span class="vendor">Microsoft</span>Career Essentials Data Analysis</div>
+      <div class="cred-chip"><span class="vendor">Microsoft</span>Career Essentials SWE</div>
+      <div class="cred-chip"><span class="vendor">NVIDIA</span>Fundamentals of Deep Learning</div>
+      <div class="cred-chip"><span class="vendor">NVIDIA</span>AI on Jetson Nano</div>
+      <div class="cred-chip"><span class="vendor">NVIDIA</span>Satellite Disaster Risk Monitoring</div>
+      <div class="cred-chip"><span class="vendor">AI Singapore</span>AI4I Foundations</div>
+      <div class="cred-chip"><span class="vendor">AI Singapore</span>AI Ethics &amp; Governance</div>
+      <div class="cred-chip"><span class="vendor">Salesforce</span>Sales Operations Professional</div>
+      <div class="cred-chip"><span class="vendor">Oracle</span>Java Foundations</div>
+      <div class="cred-chip"><span class="vendor">LinuxFdn</span>LFD121 Secure Software</div>
+      <div class="cred-chip"><span class="vendor">LinuxFdn</span>LFS158 Kubernetes</div>
+      <div class="cred-chip"><span class="vendor">LinuxFdn</span>LFS101 Introduction to Linux</div>
+      <div class="cred-chip"><span class="vendor">Databricks</span>GenAI Fundamentals</div>
+      <div class="cred-chip"><span class="vendor">KNIME</span>Basic Proficiency</div>
+      <div class="cred-chip"><span class="vendor">SCS-Google</span>Career Certificates</div>
+      <div class="cred-chip"><span class="vendor">Make</span>Foundation</div>
+      <div class="cred-chip"><span class="vendor">MongoDB</span>RAG with MongoDB</div>
+      <div class="cred-chip"><span class="vendor">MongoDB</span>Vector Search</div>
+      <div class="cred-chip"><span class="vendor">MongoDB</span>Schema Design Optimization</div>
+      <div class="cred-chip"><span class="vendor">MongoDB</span>Building AI Agents</div>
+      <div class="cred-chip"><span class="vendor">Microsoft</span>Career Essentials Data Analysis</div>
+      <div class="cred-chip"><span class="vendor">Microsoft</span>Career Essentials SWE</div>
+      <div class="cred-chip"><span class="vendor">NVIDIA</span>Fundamentals of Deep Learning</div>
+      <div class="cred-chip"><span class="vendor">NVIDIA</span>AI on Jetson Nano</div>
+      <div class="cred-chip"><span class="vendor">NVIDIA</span>Satellite Disaster Risk Monitoring</div>
+      <div class="cred-chip"><span class="vendor">AI Singapore</span>AI4I Foundations</div>
+      <div class="cred-chip"><span class="vendor">AI Singapore</span>AI Ethics &amp; Governance</div>
+      <div class="cred-chip"><span class="vendor">Salesforce</span>Sales Operations Professional</div>
+      <div class="cred-chip"><span class="vendor">Oracle</span>Java Foundations</div>
+      <div class="cred-chip"><span class="vendor">LinuxFdn</span>LFD121 Secure Software</div>
+      <div class="cred-chip"><span class="vendor">LinuxFdn</span>LFS158 Kubernetes</div>
+      <div class="cred-chip"><span class="vendor">LinuxFdn</span>LFS101 Introduction to Linux</div>
+      <div class="cred-chip"><span class="vendor">Databricks</span>GenAI Fundamentals</div>
+      <div class="cred-chip"><span class="vendor">KNIME</span>Basic Proficiency</div>
+      <div class="cred-chip"><span class="vendor">SCS-Google</span>Career Certificates</div>
+      <div class="cred-chip"><span class="vendor">Make</span>Foundation</div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="reveal">
+  <div class="section-head">
+    <span class="num">03 — Selected Work</span>
+    <h2>Things I've <span class="em">shipped</span>.</h2>
+  </div>
+
+  <div class="projects">
+
+    <div class="project">
+      <div class="p-num">01 /</div>
+      <div>
+        <div class="p-title">Procurement Department <em>RPA Bot</em></div>
+        <div class="p-org">Mandai Wildlife Group · 2025–2026</div>
+      </div>
+      <div>
+        <div class="p-desc">An 8-step Power Automate Desktop bot that automates the full procurement document lifecycle: login, navigation, extraction, classification by file type (zip / pdf / xls), renaming, and routing into department-based SharePoint folders. Saved the Procurement department approximately 1,200 hours and surfaced vendor data in real time.</div>
+        <div class="p-stack"><span>Power Automate</span><span>RPA</span><span>SharePoint</span><span>Excel</span></div>
+      </div>
+      <div class="p-meta">
+        <div class="p-arrow">↗</div>
+        <div><span class="label">Impact</span>~1,200 hours saved</div>
+        <div><span class="label">Status</span>Production</div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="p-num">02 /</div>
+      <div>
+        <div class="p-title">AI Psychologist <em>Chatbot</em></div>
+        <div class="p-org">Temasek Polytechnic · 2024–2025</div>
+      </div>
+      <div>
+        <div class="p-desc">An emotional wellness companion combining RASA intent recognition with GPT-4o for empathetic response generation. Top-performing intent models (SGDClassifier, RidgeClassifier) selected from 21 benchmarked algorithms. MySQL-backed conversation memory enables personalised follow-ups. Streamlit interface for real-time engagement.</div>
+        <div class="p-stack"><span>GPT-4o</span><span>RASA</span><span>RAG</span><span>scikit-learn</span><span>Streamlit</span><span>MySQL</span></div>
+      </div>
+      <div class="p-meta">
+        <div class="p-arrow">↗</div>
+        <div><span class="label">Domain</span>Mental Health AI</div>
+        <div><span class="label">Repo</span>NLP Part 1 + 2</div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="p-num">03 /</div>
+      <div>
+        <div class="p-title">AI <em>Image Recognition</em> Model Testing</div>
+        <div class="p-org">Mandai Wildlife Group · 2025</div>
+      </div>
+      <div>
+        <div class="p-desc">Structured evaluation of a Microsoft AI Builder receipt-detection model across email and form-upload pipelines. Compiled 40+ test images with varying quality, benchmarked extraction against ground truth, and categorised results into correct / misidentified / uncertain — yielding a 97% average accuracy and a roadmap for retraining.</div>
+        <div class="p-stack"><span>AI Builder</span><span>Excel</span><span>Model Eval</span><span>QA</span></div>
+      </div>
+      <div class="p-meta">
+        <div class="p-arrow">↗</div>
+        <div><span class="label">Result</span>97% accuracy</div>
+        <div><span class="label">Outcome</span>Production-ready</div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="p-num">04 /</div>
+      <div>
+        <div class="p-title"><em>BreakTime</em> — IoT Wellbeing</div>
+        <div class="p-org">Temasek Polytechnic · 2024–2025</div>
+      </div>
+      <div>
+        <div class="p-desc">A smart office solution that detects desk occupancy and nudges healthier work habits. Pressac sensors stream into AWS IoT Core, Lambda functions process the data, and SNS fires alerts after 90 minutes of continuous sitting. DynamoDB stores patterns for long-term analytics.</div>
+        <div class="p-stack"><span>AWS Lambda</span><span>SNS</span><span>IoT Core</span><span>DynamoDB</span></div>
+      </div>
+      <div class="p-meta">
+        <div class="p-arrow">↗</div>
+        <div><span class="label">Domain</span>IoT · Wellbeing</div>
+        <div><span class="label">Stack</span>Serverless</div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="p-num">05 /</div>
+      <div>
+        <div class="p-title"><em>SmartSort</em> — Serverless Vision</div>
+        <div class="p-org">Temasek Polytechnic · 2024</div>
+      </div>
+      <div>
+        <div class="p-desc">A fully serverless image classification web app powered by AWS Rekognition with a custom-trained model on a Kaggle animal dataset. S3 static hosting, API Gateway routing, Lambda processing, CloudWatch observability — built for photographers drowning in unsorted libraries.</div>
+        <div class="p-stack"><span>Rekognition</span><span>S3</span><span>API Gateway</span><span>Lambda</span><span>CloudWatch</span></div>
+      </div>
+      <div class="p-meta">
+        <div class="p-arrow">↗</div>
+        <div><span class="label">Domain</span>Computer Vision</div>
+        <div><span class="label">Stack</span>AWS · Python</div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="p-num">06 /</div>
+      <div>
+        <div class="p-title"><em>ConciseMail</em> — RPA Bot</div>
+        <div class="p-org">Temasek Polytechnic · 2024</div>
+      </div>
+      <div>
+        <div class="p-desc">A UiPath workflow that reads HR inbox traffic, summarises with ChatGPT, logs to a structured Excel store with timestamp + sender + summary, pushes critical dates into Todoist, and pings Discord for visibility. Removes the manual triage tax from HR teams entirely.</div>
+        <div class="p-stack"><span>UiPath</span><span>OpenAI API</span><span>Outlook</span><span>Todoist</span><span>Discord</span></div>
+      </div>
+      <div class="p-meta">
+        <div class="p-arrow">↗</div>
+        <div><span class="label">Domain</span>HR Automation</div>
+        <div><span class="label">Stack</span>UiPath · LLM</div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="p-num">07 /</div>
+      <div>
+        <div class="p-title">Microsoft <em>Copilot Prompt Engineering</em></div>
+        <div class="p-org">Mandai Wildlife Group · 2025</div>
+      </div>
+      <div>
+        <div class="p-desc">Designed and tested enterprise prompt logic for Microsoft 365 Copilot using the RACE and CREATE frameworks. Configured Copilot Studio to behave as a document-first assistant grounded in trusted sources, with fallback logic for unknown territory — reducing hallucinations in customer-facing membership queries.</div>
+        <div class="p-stack"><span>Copilot Studio</span><span>Prompt Engineering</span><span>Microsoft 365</span></div>
+      </div>
+      <div class="p-meta">
+        <div class="p-arrow">↗</div>
+        <div><span class="label">Domain</span>Enterprise GenAI</div>
+        <div><span class="label">Frameworks</span>RACE / CREATE</div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="p-num">08 /</div>
+      <div>
+        <div class="p-title">Deep Learning · <em>GTSRB</em></div>
+        <div class="p-org">Temasek Polytechnic · 2024–2025</div>
+      </div>
+      <div>
+        <div class="p-desc">CNN-based traffic-sign classifier across 43 classes on the German Traffic Sign Recognition Benchmark — achieved 98% accuracy. Experimented with transfer learning (VGG16, ResNet), data augmentation, and hyperparameter tuning. Confusion-matrix analysis to identify weak classes. Deployed as a Streamlit app for live inference.</div>
+        <div class="p-stack"><span>TensorFlow</span><span>CNN</span><span>VGG16</span><span>ResNet</span><span>Streamlit</span></div>
+      </div>
+      <div class="p-meta">
+        <div class="p-arrow">↗</div>
+        <div><span class="label">Result</span>98% accuracy</div>
+        <div><span class="label">Repo</span>GTSRB · DLOR</div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="p-num">09 /</div>
+      <div>
+        <div class="p-title"><em>GenAI Tourism</em> Brand Analysis</div>
+        <div class="p-org">Mandai Wildlife Group · 2025</div>
+      </div>
+      <div>
+        <div class="p-desc">Structured analysis of how 10 major GenAI platforms (ChatGPT, Claude, Gemini, Copilot, ...) surface Singapore tourism content. Captured 100+ responses to identical prompts, scored brand recall and itinerary position, and built Excel dashboards ranking each platform's mentions of Mandai parks.</div>
+        <div class="p-stack"><span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>Excel Pivot</span></div>
+      </div>
+      <div class="p-meta">
+        <div class="p-arrow">↗</div>
+        <div><span class="label">Output</span>Brand visibility report</div>
+        <div><span class="label">Method</span>Comparative LLM eval</div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="p-num">10 /</div>
+      <div>
+        <div class="p-title"><em>GreenHub</em> — Sustainability App</div>
+        <div class="p-org">Temasek Polytechnic · 2024</div>
+      </div>
+      <div>
+        <div class="p-desc">Cross-platform Flutter app for sharing sustainable habits. Full auth flow (login, Google sign-in, password reset), Firebase-backed social features, and a hands-free speech-to-text search — the most technically demanding feature and the one I'm most proud of.</div>
+        <div class="p-stack"><span>Flutter</span><span>Firebase</span><span>Speech-to-Text</span><span>Dart</span></div>
+      </div>
+      <div class="p-meta">
+        <div class="p-arrow">↗</div>
+        <div><span class="label">Domain</span>Mobile · Climate</div>
+        <div><span class="label">Repo</span>Mobile_App_Dev</div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="p-num">11 /</div>
+      <div>
+        <div class="p-title">HDB Resale <em>Price Prediction</em></div>
+        <div class="p-org">Temasek Polytechnic · 2024</div>
+      </div>
+      <div>
+        <div class="p-desc">Advanced regression on Singapore's public housing market. EDA, geospatial and lease-decay feature engineering, then an ensemble compared across Decision Tree, Random Forest, Gradient Boosting, XGBoost, and CatBoost. RandomizedSearchCV for tuning. Joblib-serialised for deployment.</div>
+        <div class="p-stack"><span>XGBoost</span><span>CatBoost</span><span>Pandas</span><span>scikit-learn</span></div>
+      </div>
+      <div class="p-meta">
+        <div class="p-arrow">↗</div>
+        <div><span class="label">Domain</span>Real Estate ML</div>
+        <div><span class="label">Repo</span>project-mldp</div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="p-num">12 /</div>
+      <div>
+        <div class="p-title">Microsoft <em>Tay</em> · AI Ethics Study</div>
+        <div class="p-org">Temasek Polytechnic · 2024–2025</div>
+      </div>
+      <div>
+        <div class="p-desc">Critical case study on the 24-hour collapse of Microsoft's Tay chatbot in 2016. Analysed the architecture, the failure modes (unfiltered input, no human-in-the-loop, no adversarial testing), and proposed concrete safeguards: moderation pipelines, HITL governance, SHAP/LIME explainability, pre-deployment ethics review.</div>
+        <div class="p-stack"><span>AI Ethics</span><span>Responsible AI</span><span>HITL</span><span>SHAP</span></div>
+      </div>
+      <div class="p-meta">
+        <div class="p-arrow">↗</div>
+        <div><span class="label">Domain</span>Responsible AI</div>
+        <div><span class="label">Format</span>Case study + slides</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="experience" class="exp-section full reveal">
+  <div style="max-width:1400px; margin:0 auto; padding:120px 32px;">
+    <div class="section-head">
+      <span class="num">04 — Experience</span>
+      <h2>Where I've <span class="em">worked</span>.</h2>
+    </div>
+
+    <div class="exp-grid">
+
+      <div class="exp">
+        <div class="e-date">
+          Apr 2026 — Now
+          <span class="duration">Singapore · On-site</span>
+        </div>
+        <div>
+          <div class="e-role">Business Analyst <em>Intern</em></div>
+          <div class="e-company">Accenture</div>
+          <div class="e-body">Supporting digital transformation and enterprise application projects across regional initiatives. Coordinating requirements, user stories, SIT and UAT defect management. Working in Jira and Salesforce alongside developers, testers, and PMs to keep delivery on track and reporting accurate.</div>
+        </div>
+        <div class="e-tags">
+          <span>Jira</span><span>Salesforce</span><span>Agile</span><span>SIT / UAT</span><span>BA</span>
+        </div>
+      </div>
+
+      <div class="exp">
+        <div class="e-date">
+          May 2025 — Apr 2026
+          <span class="duration">12 months · Mandai</span>
+        </div>
+        <div>
+          <div class="e-role">AI &amp; <em>RPA Engineer</em> Intern</div>
+          <div class="e-company">Mandai Wildlife Group · Transformation Office</div>
+          <div class="e-body">Led the Procurement RPA build, the departmental website revamp, and the AEIOU Learning Festival microsite. Drove Microsoft Copilot prompt engineering for enterprise reliability. Engaged with SIT, Databricks, AWS, NCS, and Google Cloud on cloud and AI use cases. Applied Design Thinking and Lean methods throughout.</div>
+          <div class="e-recog">★ Letter of recommendation from supervisor</div>
+        </div>
+        <div class="e-tags">
+          <span>RPA</span><span>Power Automate</span><span>AI Builder</span><span>Copilot Studio</span><span>Design Thinking</span>
+        </div>
+      </div>
+
+      <div class="exp">
+        <div class="e-date">
+          Apr 2025 — May 2025
+          <span class="duration">2 months</span>
+        </div>
+        <div>
+          <div class="e-role">Innovation &amp; <em>Tech Management</em> Intern</div>
+          <div class="e-company">Mandai Wildlife Group</div>
+          <div class="e-body">Built and optimised workflows on Microsoft Power Platform. Supported RPA deployments leveraging pre-trained AI models. Translated business requirements into prototype tools, ran research on cloud platforms, and joined innovation workshops to sharpen problem-solving.</div>
+        </div>
+        <div class="e-tags">
+          <span>Power Apps</span><span>Power BI</span><span>M365</span><span>AI Builder</span>
+        </div>
+      </div>
+
+      <div class="exp">
+        <div class="e-date">
+          Aug 2024 — Oct 2024
+          <span class="duration">3 months · Part-time</span>
+        </div>
+        <div>
+          <div class="e-role"><em>Assistant Software</em> Engineer</div>
+          <div class="e-company">MIRAE Distributions</div>
+          <div class="e-body">Built containerised full-stack apps with React.js, Node.js, and MongoDB. Designed REST APIs, implemented auth, optimised queries. Used Docker to standardise dev and prod. Built RPA bots for data extraction and report generation. Agile sprints, code reviews, shipping production features.</div>
+        </div>
+        <div class="e-tags">
+          <span>React</span><span>Node</span><span>MongoDB</span><span>Docker</span><span>REST</span>
+        </div>
+      </div>
+
+      <div class="exp">
+        <div class="e-date">
+          Feb 2024 — Apr 2024
+          <span class="duration">3 months · Part-time</span>
+        </div>
+        <div>
+          <div class="e-role"><em>Desktop Engineer</em></div>
+          <div class="e-company">Alphaeus Pte Ltd</div>
+          <div class="e-body">Optimising desktop infrastructure at IMH. Troubleshooting, deploying, and maintaining environments under real production pressure. Networking fundamentals, PowerShell scripting, Wi-Fi testing across indoor sites. Where the operational fundamentals got laid.</div>
+          <div class="e-recog">★ Operational Excellence Award</div>
+        </div>
+        <div class="e-tags">
+          <span>Networking</span><span>PowerShell</span><span>Wi-Fi</span><span>Service Desk</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── RECOMMENDATION ─────────── -->
+<section class="recommendation full reveal">
+  <div class="recommendation-inner">
+    <span class="rec-eyebrow">04.5 — Recommendation</span>
+    <blockquote class="rec-quote">
+      Moanish approaches problems with <span class="highlight">thoughtfulness and clarity</span>, learns independently, and consistently delivers work that <span class="highlight">stakeholders can trust</span>. He brings professionalism, a strong sense of responsibility to everything he does, and contributes positively to the teams and people around him.
+    </blockquote>
+    <div class="rec-attribution">
+      <div>
+        <div class="signer-name">Mark Teo Jun Yi</div>
+        <div class="signer-title">Assistant Vice President · Transformation Office</div>
+      </div>
+      <div class="signer-company">Mandai Wildlife Group</div>
+      <div class="signer-date">25 Feb 2026<br>Official Letter</div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="reveal">
+  <div class="section-head">
+    <span class="num">05 — Toolkit</span>
+    <h2>What I <span class="em">use</span>.</h2>
+  </div>
+
+  <div class="skills-matrix">
+    <div class="skill-block">
+      <div class="icon">α</div>
+      <h3>AI &amp; ML</h3>
+      <ul>
+        <li>Python · TensorFlow · PyTorch · Keras</li>
+        <li>scikit-learn · XGBoost · CatBoost</li>
+        <li>NLP · CNNs · RAG · LangChain · LangGraph</li>
+        <li>GPT-4o · Claude · RASA · Transformers</li>
+        <li>SHAP · Streamlit · MLflow basics</li>
+      </ul>
+    </div>
+
+    <div class="skill-block">
+      <div class="icon">β</div>
+      <h3>Cloud &amp; DevOps</h3>
+      <ul>
+        <li>AWS Lambda · S3 · DynamoDB · IoT Core</li>
+        <li>API Gateway · Rekognition · SNS · CloudWatch</li>
+        <li>Docker · Kubernetes · EKS · OpenShift</li>
+        <li>Serverless · GitOps · Istio basics</li>
+        <li>Databricks · Google Cloud · IBM Cloud</li>
+      </ul>
+    </div>
+
+    <div class="skill-block">
+      <div class="icon">γ</div>
+      <h3>RPA &amp; Automation</h3>
+      <ul>
+        <li>UiPath Studio · Activities · Orchestrator</li>
+        <li>Microsoft Power Automate Desktop</li>
+        <li>Power Apps · AI Builder · Copilot Studio</li>
+        <li>OpenAI API · Make · n8n</li>
+        <li>Outlook · Excel · SharePoint integration</li>
+      </ul>
+    </div>
+
+    <div class="skill-block">
+      <div class="icon">δ</div>
+      <h3>Data &amp; BI</h3>
+      <ul>
+        <li>Power BI · KNIME · Cognos</li>
+        <li>Pandas · NumPy · SQL · MongoDB Aggregation</li>
+        <li>Excel · Excel Pivot · Copilot for Excel</li>
+        <li>R basics · Statistical analysis</li>
+        <li>Airflow · Kafka · Shell pipelines</li>
+      </ul>
+    </div>
+
+    <div class="skill-block">
+      <div class="icon">ε</div>
+      <h3>Security &amp; Networking</h3>
+      <ul>
+        <li>Cisco Ethical Hacker · Cyber Threat Mgmt</li>
+        <li>Wireshark · Packet Tracer · Network Defense</li>
+        <li>Linux · OWASP Top 10 · Zero Trust</li>
+        <li>OpenSSF · Sigstore · Secure SDLC</li>
+        <li>Endpoint security · Network triage</li>
+      </ul>
+    </div>
+
+    <div class="skill-block">
+      <div class="icon">ζ</div>
+      <h3>Web, Mobile &amp; PM</h3>
+      <ul>
+        <li>HTML · CSS · JavaScript · React · Node.js</li>
+        <li>Flutter · Dart · Firebase</li>
+        <li>MySQL · MongoDB · REST APIs</li>
+        <li>Jira · Salesforce · Agile · Scrum</li>
+        <li>Figma · UX research · MIRO</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="reveal">
+  <div class="section-head">
+    <span class="num">06 — Education</span>
+    <h2>The <span class="em">long</span> arc.</h2>
+  </div>
+
+  <div class="edu-list">
+
+    <div class="edu-row">
+      <div class="year">Incoming</div>
+      <div>
+        <div class="school">Singapore University of Technology &amp; Design <em>· SUTD</em></div>
+        <div class="program">Design &amp; Artificial Intelligence</div>
+      </div>
+      <div class="status incoming">★ Offer accepted</div>
+    </div>
+
+    <div class="edu-row">
+      <div class="year">2023 — 2026</div>
+      <div>
+        <div class="school"><em>Temasek Polytechnic</em></div>
+        <div class="program">Diploma in Applied Artificial Intelligence · 15+ activities &amp; clubs · Dell InnovateFest Hackathon</div>
+      </div>
+      <div class="status">Graduated</div>
+    </div>
+
+    <div class="edu-row">
+      <div class="year">2019 — 2023</div>
+      <div>
+        <div class="school">Deyi Secondary School</div>
+        <div class="program">O-Levels · Young Journalists' Club · Basketball · Track · Badminton · Handball</div>
+      </div>
+      <div class="status">Completed</div>
+    </div>
+
+    <div class="edu-row">
+      <div class="year">2013 — 2018</div>
+      <div>
+        <div class="school">Zhonghua Primary School</div>
+        <div class="program">PSLE · Scouts · Volleyball · Track · Football</div>
+      </div>
+      <div class="status">Completed</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─────────── PRESS / FEATURED ─────────── -->
+<section class="press full reveal">
+  <div class="press-inner">
+    <span class="num">07 — As featured in</span>
+    <div>
+      <blockquote class="press-quote">
+        "Building the Procurement RPA Bot taught me how technology can <em style="color:var(--accent); font-style:italic;">free people to focus on higher-value work</em>."
+      </blockquote>
+      <div class="press-source">
+        Mandai Wildlife Group · Innovation Talent Programme feature, Mar 2026<br>
+        <a href="https://www.linkedin.com/pulse/where-innovation-creativity-wildlife-conservation-9umic" target="_blank" rel="noopener">Read the full article ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact full reveal">
+  <div class="contact-mark">M.</div>
+  <div class="pretext">— Let's build something —</div>
+  <h2>Want to <em>work</em><br>together?</h2>
+  <p style="font-family:var(--mono); font-size:13px; color:var(--paper-dim); max-width:540px; margin:0 auto; line-height:1.7;">
+    Open to AI engineering, ML, RPA, business analyst, and full-stack roles. Currently at Accenture · TP graduate · SUTD-bound. Based in Singapore — happy on-site, hybrid, or remote.
+  </p>
+  <div class="contact-links">
+    <a href="https://www.linkedin.com/in/moanish18" target="_blank" rel="noopener">LinkedIn <span class="arrow">↗</span></a>
+    <a href="https://github.com/Moanish18" target="_blank" rel="noopener">GitHub <span class="arrow">↗</span></a>
+    <a href="https://www.credly.com/users/moanish.531fc0ec" target="_blank" rel="noopener">Credly <span class="arrow">↗</span></a>
+    <a href="mailto:ishmoan@gmail.com">Email <span class="arrow">↗</span></a>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 Moanish Ashok Kumar <span class="dot">·</span> Singapore</div>
+  <div>Designed &amp; built solo <span class="dot">·</span> v2.0</div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
